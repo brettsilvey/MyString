@@ -218,23 +218,34 @@ MyString MyString::mySubstring(int n, int m)
 
 int MyString::indexOf(MyString input)
 {
-	MyString workingString(*this);
 	int index = 0;
-	for (int i = 0; i < workingString.currLen; i++) {
-		int j = 0;
-		if (workingString.arr[i] == input.arr[j]) {
-			if (workingString.arr[i+1] == input.arr[j + 1]) {
-				index = j - 1;
-				j++;
-				cout << workingString.arr[i] << endl;
+	int j = 0;
+	for (int i = 0; i < currLen; i++) {
+		if (arr[i] == input.arr[j]) {
+			index = i;
+			j++;
+			if (j == input.currLen) {
+				return index - input.currLen + 1;
 			}
 		}
-		else if (workingString.arr[i + 1] != input.arr[j + 1]) {
-			j = 0;
-			index = 0;
+	}
+	return -1;
+}
+
+int MyString::lastIndexOf(MyString input)
+{
+	int index = 0;
+	int j = 0;
+	for (int i = 0; i < currLen; i++) {
+		if (arr[i] == input.arr[j]) {
+			index = i;
+			j++;
+			if (j == input.currLen) {
+				
+				return index;
+			}
 		}
 	}
-	return 0;
 }
 
 // toString method

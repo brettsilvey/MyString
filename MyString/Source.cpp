@@ -49,6 +49,7 @@ int main() {
 	cout << "This is the starting index of our parameter in our MyString object: " << obj5.indexOf(obj4) << "\n" << endl;
 
 	//testing lastIndexOf method
+	cout << "This is the last index of our parameter in our MyString object: " << obj5.lastIndexOf(obj4) << "\n" << endl;
 
 
 	//MyString w(one + two);

@@ -29,6 +29,8 @@ public:
 	MyString substring(int index); // substring that takes one input
 	MyString mySubstring(int n, int m); // substring method that takes two inputs
 	int indexOf(MyString input); // indexOf function
+	int lastIndexOf(MyString input); // lastIndexOf funtion
+
 };
 
 #endif //MyString 
