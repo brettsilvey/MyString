@@ -43,7 +43,7 @@ int MyString::getLen()
 	return currLen;
 }
 
-// concate method
+// concate method - works
 MyString MyString::operator+(const MyString & rhs)
 {
 	MyString result(*this);
